@@ -41,14 +41,14 @@ namespace Client
            
         }
 
-        private static void HubConnect(string userName, string token)
+        private static void HubConnect(string userName)
         {
             HubConnection hubConnection;
 
             hubConnection = new HubConnectionBuilder()
                 .WithUrl("https://localhost:5001/chat", options =>
                 {
-                    options.AccessTokenProvider = token;
+                   
                 })
                 .Build();
 
